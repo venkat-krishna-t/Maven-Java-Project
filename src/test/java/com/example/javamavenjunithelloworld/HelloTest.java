@@ -23,7 +23,8 @@ public class HelloTest {
 
         Hello hi = new Hello();
         hi.sayHello(stream);
-        assertThat(os.toString(), is(equalTo(Hello.HELLO + "\n")));
+        //assertThat(os.toString(), is(equalTo(Hello.HELLO + "\n")));
+        assertThat(toString(), is(equalTo(Hello.HELLO + "\n")));
     }
 
     @Test
@@ -37,7 +38,8 @@ public class HelloTest {
 
         // Does it say "Hello!" three times?
         String goal = Hello.HELLO + "\n" + Hello.HELLO + "\n" + Hello.HELLO + "\n";
-        assertThat(os.toString(), is(equalTo(goal)));
+       // assertThat(os.toString(), is(equalTo(goal)));
+        assertThat(toString(), is(equalTo(goal)));
     }
 
     @Test(expected = IllegalArgumentException.class)
